@@ -10,8 +10,8 @@ namespace HelpDeskFlow.Models
         public string descripcion {  get; set; }
         public string estado { get; set; }
         public string prioridad { get; set; }
-        public TimeSpan fecha_creacion { get; set; }
-        public TimeSpan fecha_resolucion { get; set; }
+        public DateTime fecha_creacion { get; set; }
+        public DateTime fecha_resolucion { get; set; }
         public int id_usuario_cliente { get; set; }
         public int id_usuario_agente { get; set; }
     }

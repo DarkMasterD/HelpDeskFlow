@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    <form asp-action="NuevoTicket" method="post">
+        <div class="form-group">
+            <label for="titulo" class="form-label">Título</label>
+            @Html.TextBox("titulo", "", new { @class = "form-control", required = "required" })
+        </div>
+        <div class="form-group">
+            <label for="descripcion" class="form-label">Descripción</label>
+            @Html.TextArea("descripcion", "", new { @class = "form-control", id = "descripcion", rows = "4", required = "required" })
+        </div>
+        <div class="form-group">
+            <label for="titulo" class="form-label">Prioridad</label>
+            @Html.DropDownList("prioridad", (IEnumerable<SelectListItem>)ViewBag.Prioridades, "Seleccione la prioridad", new { @class = "form-control", id = "cboPrioridad" })
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+    </form>
+</div>
