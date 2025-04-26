@@ -8,5 +8,9 @@ namespace HelpDeskFlow.Models
         {
 
         }
+
+        public DbSet<Comentarios> Comentarios { get; set; }
+        public DbSet<Tickets> Tickets { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
     }
 }
